@@ -9,25 +9,27 @@ AI-integrated medical voice assistant with:
 
 ```text
 backend/
-  src/
-    app.js
-    server.js
-    config.js
-    services/
-      reasoning.js
-      tts.js
+  app.py
+  config.py
+  server.py
+  services/
+    reasoning.py
+    tts.py
 frontend/
   index.html
   app.js
   styles.css
-test/
-  app.test.js
+tests/
+  test_app.py
+requirements.txt
 ```
 
 ## Setup
 
 ```bash
-npm install
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 Optional environment variables:
@@ -43,7 +45,7 @@ If BioMistral/AfriSpeech are not configured, the app uses safe fallbacks.
 ## Run
 
 ```bash
-npm start
+python -m backend.server
 ```
 
 Open `http://localhost:3000`.
@@ -51,5 +53,5 @@ Open `http://localhost:3000`.
 ## Test
 
 ```bash
-npm test
+python -m unittest discover -s tests
 ```
