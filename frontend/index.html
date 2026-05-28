@@ -7,25 +7,10 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <main class="container">
-      <h1>medictest Voice Assistant</h1>
-      <p>Speak your medical question. The assistant reasons with BioMistral and returns voice output via AfriSpeech (or browser fallback).</p>
-
-      <section class="panel">
-        <label for="inputText">Captured input</label>
-        <textarea id="inputText" rows="4" placeholder="Your voice input appears here..."></textarea>
-        <div class="actions">
-          <button id="listenBtn" type="button">🎙️ Start listening</button>
-          <button id="sendBtn" type="button">Send</button>
-        </div>
-      </section>
-
-      <section class="panel">
-        <h2>Assistant response</h2>
-        <p id="responseText">Waiting for input...</p>
-      </section>
-    </main>
-
-    <script src="/app.js"></script>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="/app.js"></script>
   </body>
 </html>
