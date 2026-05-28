@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediCTest Assistant</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>MediCTest Voice Assistant</h1>
+      <p>Speak your medical question. The assistant reasons with BioMistral and returns voice output via AfriSpeech (or browser fallback).</p>
+
+      <section class="panel">
+        <label for="inputText">Captured input</label>
+        <textarea id="inputText" rows="4" placeholder="Your voice input appears here..."></textarea>
+        <div class="actions">
+          <button id="listenBtn" type="button">🎙️ Start listening</button>
+          <button id="sendBtn" type="button">Send</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Assistant response</h2>
+        <p id="responseText">Waiting for input...</p>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
